@@ -1,13 +1,13 @@
 # compiling
 
 spell: clean
-	gcc -Wall -Werror -fsanitize=address,undefined -g spell.c -o spell
+	gcc -Wall -Werror -fsanitize=address,undefined -g spell.c get_words.c -o spell
 
 clean:
 	rm -f spell
 
 debug:
-	gcc -Wall -Werror -fsanitize=address,undefined -g -DDEBUG=1 spell.c -o spell
+	gcc -Wall -Werror -fsanitize=address,undefined -g -DDEBUG=1 spell.c get_words.c -o spell
 
 
 
